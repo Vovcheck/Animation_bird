@@ -6,6 +6,7 @@ class Animator{
       Object.assign(this, {spritesheet, xStart, yStart, width, height, frameCount, frameDuration});
 
     this.elapsedTime = 0;
+    //   this.totalTime = frameCount * frameDuration;
     // this - means for this object. For other animation we gonna hava many animator objects.
     this.totalTime = this.frameCount * this.frameDuration;
     
@@ -21,7 +22,8 @@ class Animator{
         if(this.elapsedTime > this.totalTime) {
             this.elapsedTime -= this.totalTime; // this.elapsedTime =0: also works
         }
-        
+        // var speed = 55;
+            
         ctx.drawImage(this.spritesheet,
             this.xStart + this.width * column, this.yStart + this.height * row, //source x and y (for example, use "0, 0" on call ofthis function)
             this.width, this.height, //source width and hight

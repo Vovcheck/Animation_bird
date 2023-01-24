@@ -2,6 +2,7 @@ const gameEngine = new GameEngine();
 
 const ASSET_MANAGER = new AssetManager();
 
+// ASSET_MANAGER.queueDownload("./crow.png");
 ASSET_MANAGER.queueDownload("./bird.png");
 
 ASSET_MANAGER.downloadAll(() => {

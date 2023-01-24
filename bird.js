@@ -7,7 +7,6 @@ class Bird {
         this.x = 1024;
         this.y = 50;
         //constructor(spritesheet, xStart, yStart, width, height, "maybe PADDING in here?" frameCount, frameDuration)
-        // this.crowAnimator = new Animator(ASSET_MANAGER.getAsset("./crow.png"), 0, 0, 205, 210, 24, 0.3);
         this.birdAnimator = new Animator(ASSET_MANAGER.getAsset("./bird.png"), 0, 0, 240, 315, 20, 0.2);
         };
         
@@ -24,8 +23,6 @@ class Bird {
     };
 
     draw(ctx) {
-        // this.crowAnimator.drawFrame(this.game.clockTick, ctx, 25, 150);
         this.birdAnimator.drawFrame(this.game.clockTick, ctx, this.x, this.y);
-        // ctx.drawImage(ASSET_MANAGER.getAsset("./bird.png"), 0, 0);
-    };
+        };
 }
